@@ -66,7 +66,7 @@ const Widget = ({ type }) => {
         icon: <AccountBalanceWalletIcon className='icon' 
         style={{
           color: "crimson",
-          backgroundColor: "lightRed",
+          backgroundColor: "rgb(255,160,122)",
           borderRadius: "5px"
         }}/>
       };
