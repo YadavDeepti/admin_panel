@@ -13,6 +13,21 @@
         .charts{
             padding: 5px 20px;
         }
+
+        .listContainer{
+            box-shadow: 4px 3px 5px 0px rgba(179,179,179,0.75);
+            -webkit-box-shadow: 4px 3px 5px 0px rgba(179,179,179,0.75);
+            -moz-box-shadow: 4px 3px 5px 0px rgba(179,179,179,0.75);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+
+            .listTitle{
+                font-weight: 500;
+                color: gray;
+                margin-bottom: 15px;
+            }
+        }
     }
 }
     
