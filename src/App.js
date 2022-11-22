@@ -7,6 +7,7 @@ import './App.css';
 import {
   BrowserRouter as Router,Route,BrowserRouter,Routes
 } from "react-router-dom";
+import { productInputs, userInputs } from './formSource';
 
 function App() {
   return (
@@ -18,12 +19,12 @@ function App() {
       <Route path='users'>
         <Route index element={<List />}></Route> 
         <Route path=':userId' element={<Single />}></Route>
-        <Route path='new' element={<New />}></Route>
+        <Route path='new' element={<New inputs = {userInputs} title="Add New user"/>}></Route>
       </Route>
       <Route path='products'>
         <Route index element={<List />}></Route> 
         <Route path=':productId' element={<Single />}></Route>
-        <Route path='new' element={<New />}></Route>
+        <Route path='new' element={<New inputs = {productInputs} title="Add New Product"/>}></Route>
       </Route>
      
       </Routes>
