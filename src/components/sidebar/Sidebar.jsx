@@ -1,5 +1,6 @@
 import React from 'react'
 import './Sidebar.scss';
+import {Link} from "react-router-dom"
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
@@ -16,15 +17,24 @@ import LogoutIcon from '@mui/icons-material/Logout';
 const Sidebar = () => {
   return (
     <div className='Sidebar'>
-     <div className="top"><span className="logo">DY</span></div>
+     <div className="top">
+      <Link to="/" style={{textDecoration: "none"}}>
+      <span className="logo">DY</span>
+      </Link>
+     </div>
      <hr />
      <div className="centre">
         <ul>
           <p className="title">MAIN</p>
            <li> <DashboardIcon className='icon'/> <span>Dashboard</span></li>
            <p className="title">LISTS</p>
+           <Link to="/users" style={{textDecoration: "none"}}>
            <li><PersonIcon className='icon'/> <span>Users</span></li>
-           <li><Inventory2Icon className='icon'/> <span>Products</span></li>
+           </Link>
+          <Link to="/products" style={{textDecoration: "none"}}>
+          <li><Inventory2Icon className='icon'/> <span>Products</span></li>
+          </Link>
+           
            <li><ViewStreamIcon className='icon'/> <span>Orders</span></li> 
            <li><LocalShippingIcon className='icon'/> <span>Delivery</span></li>
            <p className="title">USEFUL</p>
