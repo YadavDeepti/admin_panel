@@ -13,8 +13,13 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useContext } from 'react';
+import {DarkModeContext} from "../../context/darkModeContext";
 
 const Sidebar = () => {
+
+  const {dispatch} =useContext(DarkModeContext);
+
   return (
     <div className='Sidebar'>
      <div className="top">
@@ -50,8 +55,8 @@ const Sidebar = () => {
         </ul>
      </div>
      <div className="bottom">
-      <div className="colorOptions"></div>
-      <div className="colorOptions"></div>
+      <div className="colorOptions" onClick={()=>dispatch({type:"LIGHT"})}></div>
+      <div className="colorOptions" onClick={()=>dispatch({type:"DARK"})}></div>
      </div>
     </div>
   )

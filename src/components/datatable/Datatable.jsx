@@ -28,7 +28,7 @@ const actionColumn =[{field:"action", headerName:"Action", width:250, renderCell
         </Link>
       </div>
 
-      <DataGrid
+      <DataGrid className="datagrid"
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
         pageSize={8}
